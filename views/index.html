@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>API Documentation</h1>
+
+    <h3>GET</h3>
+    <p>
+        Initialize the database with seed data <a target="_blank" href="/api/initialize-db">/api/initialize-db</a><br />
+    </p>
+    <p><i style="color:red"><b>Note:</b> Initalize databse before making requrests or else you will run out of sql error</i></p>
+    <br />
+    <h3>GET</h3>
+    <p>
+        API for statistics <a target="_blank"
+            href="/api/get-statistics-data?month=1">/api/get-statistics-data?month=[your
+            month
+            number]</a> default 1<br />
+        - Total sale amount of selected month<br />
+        - Total number of sold items of selected month<br />
+        - Total number of not sold items of selected month
+    </p>
+    <br />
+    <h3>GET</h3>
+    <p>API for bar chart <a target="_blank" href="/api/get-graph-data?month=1">/api/get-graph-data?month=[your month
+            number]</a> default is 1<br />
+        contains price range and the number of
+        items in that range for the selected month regardless of the year<br />
+        - 0 - 100<br />
+        - 101 - 200<br />
+        - 201-300<br />
+        - 301-400<br />
+        - 401-500<br />
+        - 501 - 600<br />
+        - 601-700<br />
+        - 701-800<br />
+        - 801-900<br />
+        - 901-above<br />
+    </p>
+    <br />
+    <h3>GET</h3>
+    <p>
+        API for pie chart <a target="_blank" href="/api/get-piechart-data?month=1">/api/get-piechart-data?month=[your
+            month
+            number]</a> default is 1<br />
+        Returns categories and number of items from that category for the selected month
+        regardless of the year.<br />
+        For example :<br />
+        - X category : 20 (items)<br />
+        - Y category : 5 (items)<br />
+        - Z category : 3 (items)
+    </p>
+    <br />
+    <h3>GET</h3>
+    <p>
+        API which fetches the data from all the 3 APIs mentioned above <a target="_blank"
+            href="/api/get-combined-data?month=1">/api/get-combined-data?month=[your
+            month
+            number]</a> default is 1<br />
+        combines the response and sends a final response of the combined JSON
+    </p>
+</body>
+
+</html>
